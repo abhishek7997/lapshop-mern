@@ -1,0 +1,146 @@
+.auth-container {
+    width:100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240,240,240);
+    position: fixed;
+    top:0;
+    left:0
+}
+
+.auth-signup-box {
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.auth-toggle {
+    display: flex;
+    height: 3vmax;
+}
+
+.auth-toggle > p {
+    color: rgba(0,0,0,0.7);
+    font:300 1vmax "Roboto";
+    transition: all 0.5s;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.auth-toggle > p:hover {
+    color: tomato;
+}
+
+.auth-signup-box > div > button {
+    background-color: tomato;
+    height: 3px;
+    width: 50%;
+    border: none;
+    transition: all 0.5s;
+}
+
+.login-form,
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.signup-form {
+    transform: translateY(-100%) translateX(-100vmax);
+}
+
+.login-form > a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+    align-self: flex-end;
+    transition: all 0.5s;
+    font: 500 0.8vmax "Gill Sans";
+}
+
+.login-form > a:hover {
+    color: black;
+}
+
+.login-form > div,
+.signup-form > div {
+    display: flex;
+    align-items: center;
+}
+
+.login-email,
+.login-password,
+.signup-name,
+.signup-email,
+.signup-password,
+.signup-upload {
+    width:100%;
+}
+
+.login-email > .MuiTextField-root,
+.login-password > .MuiTextField-root,
+.signup-name > .MuiTextField-root,
+.signup-email > .MuiTextField-root,
+.signup-password > .MuiTextField-root {
+    width: 100%;
+}
+
+/* .login-form>div>input,
+.signup-form>div>input {
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.26);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+} */
+
+.shift-left {
+    transform: translateX(-100%);
+}
+
+.shift-neutral {
+    transform: translateX(0%);
+}
+
+.shift-neutral-form {
+    transform: translateX(0%) translateY(-100%); 
+}
+
+.shift-right {
+    transform: translateX(100%);
+}
+
+@media screen and (max-width: 600px) {
+    .auth-container {
+        background-color: white;
+    }
+
+    .auth-signup-box{
+        width: 100vw;
+    }
+
+    .auth-toggle {
+        height: 5vmax;
+    }
+
+    .auth-toggle > p {
+        font: 300 2.5vmax "Roboto";
+    }
+
+    .login-form>a {
+        font: 500 2.5vmax "Gill Sans";
+    }  
+}

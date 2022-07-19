@@ -1,0 +1,22 @@
+.sidebar {
+    padding: 4rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;   
+}
+
+.sidebar > a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+    font: 500 1.2rem "Roboto";
+    padding: 2rem;
+}
+
+.sidebar > a > p{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar > a > p > svg {
+    margin-right: 0.8rem;
+}

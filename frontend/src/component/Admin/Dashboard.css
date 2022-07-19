@@ -1,0 +1,64 @@
+.dashboard {
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.dashboard-container {
+    border-left: 1px solid rgba(0,0,0,0,0.2);
+    background-color: white;
+    padding: 3rem 0;
+}
+
+.dashboard-container > h1 {
+    color: rgba(0,0,0,0.75);
+    font: 300 2rem "Roboto";
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.dashboard-summary {
+    margin: 2rem 0;
+}
+
+.dashboard-summary > div {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.dashboard-summary > div > p {
+    background-color: rgba(70, 120, 218, 0.92);
+    color: white;
+    padding: 1.5rem;
+    font: 300 1.3rem "Roboto";
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.dashboard-summary-box > a {
+    color: black;
+    font: 300 2rem "Roboto";
+    text-align: center;
+    background-color: white;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 215, 116);
+    width: 10vmax;
+    height: 10vmax;
+    margin: 2rem;
+}
+
+@media screen and (max-width:600px) {
+    .dashboard {
+        grid-template-columns: unset
+    }
+}

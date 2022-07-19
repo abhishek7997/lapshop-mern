@@ -1,0 +1,35 @@
+.products-heading {
+    margin: 2vmax auto;
+    width: 15vw;
+    border-bottom: 1px solid rgba(0,0,0,0.180);
+    padding: 2vmax;
+    color: rgba(0,0,0,0.680);
+    font: 500 1.5vmax "Roboto";
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vmax;
+    justify-content: center;
+    min-height: 30vh;
+}
+
+.pagination {
+    width: fit-content;
+    margin:0 auto;
+}
+
+.filter-slider {
+    width: 10vmax;
+    position: absolute;
+    top:10vmax;
+    left:4vmax;
+}
+
+@media screen and (max-width:600px) {
+    .products-heading {
+        font-size: 2rem;
+    }
+}

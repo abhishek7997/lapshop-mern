@@ -1,0 +1,51 @@
+.shipping-container {
+    width: 100vw;
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.shipping-box {
+    background-color: white;
+    width: 25vw;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.shipping-heading {
+    text-align: center;
+    color: rgba(0,0,0,0.65);
+    width:70%;
+    margin: 1rem auto;
+    padding: 1.3vmax;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    font: 400 1.4vmax "Roboto";
+}
+
+.shipping-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    height: 80%;
+    padding: 2vmax;
+}
+
+.shipping-form > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    .shipping-heading{
+        font-size: 1.5rem;
+    }
+
+    .shipping-box {
+        width: 85vw;
+    }
+}
