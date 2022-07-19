@@ -9,5 +9,13 @@ module.exports = function (app) {
         changeOrigin: true,
       })
     )
+  } else {
+    app.use(
+      "/api",
+      createProxyMiddleware({
+        target: "https://lapshop-abhishek.netlify.app/",
+        changeOrigin: true,
+      })
+    )
   }
 }
