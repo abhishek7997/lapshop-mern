@@ -40,7 +40,8 @@ export const createProductAPI = async (params) => {
     const config = {
       headers: { "Content-Type": "application/json" },
     }
-    const response = await axios.put(
+    console.log("Create Product Params: ", params)
+    const response = await axios.post(
       "/api/v1/admin/product/new",
       params,
       config

@@ -13,10 +13,6 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     name,
     email,
     password,
-    avatar: {
-      public_id: "sample_id",
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/240px-Missing_avatar.svg.png",
-    },
   })
 
   sendToken(user, 201, res)

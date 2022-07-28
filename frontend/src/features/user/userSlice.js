@@ -90,7 +90,7 @@ export const updateUser = createAsyncThunk(
     try {
       const { data } = await updateUserAPI(userData)
       if (data.success === false) {
-        throw "Could not update profile"
+        throw Error("Could not update profile")
       }
       return data
     } catch (err) {

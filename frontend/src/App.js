@@ -27,6 +27,7 @@ import ConfirmOrder from "./features/cart/ConfirmOrder"
 import Dashboard from "./component/Admin/Dashboard.js"
 import AdminProductsList from "./component/Admin/AdminProductsList"
 import NewProduct from "./component/Admin/NewProduct"
+import UsersList from "./component/Admin/UsersList"
 
 const Contact = () => {
   return <div>Contact</div>
@@ -134,6 +135,15 @@ function App() {
           element={
             <ProtectedRoute>
               <NewProduct />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          exact
+          path="/admin/users"
+          element={
+            <ProtectedRoute>
+              <UsersList />
             </ProtectedRoute>
           }
         />

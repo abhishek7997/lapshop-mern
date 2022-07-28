@@ -92,6 +92,14 @@ export const productsSlice = createSlice({
   name: "products",
   initialState: initialState,
   reducers: {
+    destroyState: (state, action) => {
+      console.log(action)
+      try {
+        delete state[action.payload]
+      } catch (_) {
+        state[action.payload] = null
+      }
+    },
     clearErrors: (state, action) => {
       state.error = null
     },
@@ -139,7 +147,7 @@ export const productsSlice = createSlice({
   },
 })
 
-export const { clearErrors } = productsSlice.actions
+export const { clearErrors, destroyState } = productsSlice.actions
 
 export const selectProducts = (state) => state.products
 

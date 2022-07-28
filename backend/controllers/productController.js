@@ -8,6 +8,7 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   // const { image } = req.body
 
   req.body.user = req.user.id
+  console.log(req.body)
   const product = await Product.create(req.body)
   res.status(201).json({
     success: true,

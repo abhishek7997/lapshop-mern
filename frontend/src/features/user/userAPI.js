@@ -128,3 +128,14 @@ export const resetPasswordAPI = async (params) => {
     return err.response
   }
 }
+
+export const getAllUsersAPI = async () => {
+  try {
+    const response = await axios.get("/api/v1/admin/users")
+    console.log("All users: ", response)
+    return response
+  } catch (err) {
+    console.log(err)
+    return err.response
+  }
+}

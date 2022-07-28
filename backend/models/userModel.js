@@ -23,16 +23,6 @@ const userSchema = new mongoose.Schema({
     minLength: [8, "Password must contain more than 8 characters"],
     select: false, // exclude password from any queries
   },
-  avatar: {
-    public_id: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-  },
   role: {
     type: String,
     default: "user",

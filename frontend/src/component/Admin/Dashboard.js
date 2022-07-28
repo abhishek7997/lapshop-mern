@@ -1,10 +1,26 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
+import { useSelector, useDispatch } from "react-redux"
 import { NavLink, Link } from "react-router-dom"
 import { Typography } from "@mui/material"
 import Sidebar from "./Sidebar.js"
+import {
+  getAllUsers,
+  clearErrors,
+  destroyState,
+} from "../../features/user/usersListSlice"
 import "./Dashboard.css"
 
 const Dashboard = () => {
+  const dispatch = useDispatch()
+  const { loading, error, users = null } = useSelector((state) => state.users)
+
+  useEffect(() => {
+    if (error) {
+      dispatch(clearErrors())
+    }
+    dispatch(getAllUsers())
+  }, [dispatch])
+
   return (
     <div className="dashboard">
       <Sidebar />
@@ -23,7 +39,7 @@ const Dashboard = () => {
             </Link>
             <Link to="/admin/users">
               <p>Users</p>
-              <p>4</p>
+              <p>{users && users.length}</p>
             </Link>
           </div>
         </div>
