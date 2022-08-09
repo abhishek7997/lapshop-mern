@@ -14,11 +14,11 @@
 
 .banner > h1 {
     margin: 5vmax;
-    font: 600 2.5vmax "Roboto";
+    font: 600 4vmax "Roboto";
 }
 
 .banner > p {
-    font: 300 1.4vmax;
+    font: 300 4vmax "Roboto";
 }
 
 .banner > a > button {
