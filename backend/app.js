@@ -10,12 +10,10 @@ app.use(cookieParser())
 // Route imports
 const product = require("./routes/productRoute")
 const user = require("./routes/userRoute")
-const order = require("./routes/orderRoute")
 
 // app.use(<mount-path>, (function to be called on this <mount-path>))
 app.use("/api/v1", product) // Application-level middleware
 app.use("/api/v1", user)
-app.use("/api/v1", order)
 
 app.use(express.static(path.join(__dirname, "../frontend/build")))
 app.get("*", (req, res) => {

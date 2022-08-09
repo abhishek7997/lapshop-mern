@@ -22,7 +22,7 @@
 
 .profile-container>div:first-child>a {
     border:none;
-    background-color: tomato;
+    background-color: rgb(17, 156, 255);
     color: white;
     transition: all 0.5s;
     text-align: center;
@@ -33,7 +33,7 @@
 }
 
 .profile-container>div:first-child>a:hover {
-    background-color: rgb(204,78,59);
+    background-color: rgb(15, 135, 221);
 }
 
 .profile-container>div:last-child {

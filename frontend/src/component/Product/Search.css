@@ -20,7 +20,7 @@
     width:50%;
     outline: none;
     border-radius: 0;
-    font: 300 1.1vmax cursive;
+    font: 300 1.1vmax sans-serif;
     box-sizing: border-box;
     height: 8%;
 }
@@ -28,11 +28,11 @@
 .search-box > input[type="submit"] {
     height: 8%;
     border-radius: 0;
-    background-color: tomato;
+    background-color: rgb(17, 156, 255);
     border:none;
     padding: 1vmax;
     width: 10%;
-    font: 300 1.1vmax "Roboto";
+    font: 300 1.4vmax "Roboto";
     cursor: pointer;
     color: white;
     transition: all 0.5s;
