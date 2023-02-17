@@ -45,7 +45,7 @@ function App() {
   }, [])
 
   return (
-    <Router basename="/">
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} exact></Route>
