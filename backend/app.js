@@ -8,8 +8,8 @@ app.use(express.json()) // inbuilt Application-level middleware. express.json pa
 app.use(cookieParser())
 
 // Route imports
-const product = require("./routes/productRoute")
-const user = require("./routes/userRoute")
+const product = require(path.join(__dirname, "./routes/productRoute"))
+const user = require(path.join(__dirname, "./routes/userRoute"))
 
 // app.use(<mount-path>, (function to be called on this <mount-path>))
 app.use("/api/v1", product) // Application-level middleware
