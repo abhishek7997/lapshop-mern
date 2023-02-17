@@ -112,13 +112,18 @@ const Navbar = () => {
                 </Tooltip>
               ) : (
                 <>
-                  {user && user.user.role === "admin" && (
-                    <Tooltip title="Dashboard">
-                      <NavLink to="/admin/dashboard" style={{ color: "white" }}>
-                        <RiDashboardFill />
-                      </NavLink>
-                    </Tooltip>
-                  )}
+                  {user && user.user
+                    ? user.user.role === "admin" && (
+                        <Tooltip title="Dashboard">
+                          <NavLink
+                            to="/admin/dashboard"
+                            style={{ color: "white" }}
+                          >
+                            <RiDashboardFill />
+                          </NavLink>
+                        </Tooltip>
+                      )
+                    : null}
                   <Tooltip title="View Profile">
                     <NavLink to="/account" style={{ color: "white" }}>
                       <FaUserAlt />

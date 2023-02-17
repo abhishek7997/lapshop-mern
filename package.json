@@ -7,13 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --force --prefix frontend && npm run build --force --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --force --prefix frontend && npm run build --force --prefix frontend",
+    "server": "node backend/server.js",
+    "client": "npm start --prefix frontend",
+    "begin": "concurrently \"npm run server \" \"npm run client\""
   },
   "author": "M.Abhishek",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
+    "concurrently": "^7.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -24,5 +28,8 @@
     "react-icons": "^4.4.0",
     "react-material-file-upload": "^0.0.4",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^10.0.0"
   }
 }

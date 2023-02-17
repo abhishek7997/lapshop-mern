@@ -13,7 +13,7 @@ module.exports = function (app) {
     app.use(
       "/api",
       createProxyMiddleware({
-        target: "https://lapshop-abhishek.netlify.app/",
+        target: "https://lapshop-mern.vercel.app/",
         changeOrigin: true,
       })
     )
