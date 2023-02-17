@@ -18,5 +18,6 @@
   ],
   "buildCommand": "npm install --force --prefix frontend && npm run build --force --prefix frontend",
   "outputDirectory": "./frontend/build",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "framework": null
 }
